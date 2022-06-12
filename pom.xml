@@ -28,6 +28,7 @@
 
     <modules>
         <module>cloudbay-parent</module>
+        <module>cloudbay-commons</module>
     </modules>
 
 </project>
