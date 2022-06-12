@@ -1,0 +1,48 @@
+version: "3"
+services:
+  mailtrap:
+    image: dbck/mailtrap:1.0.0
+    ports:
+      - "80:80"
+      - "25:25"
+      - "110:110"
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_PASSWORD: masterkey
+    stdin_open: true
+    tty: true
+    ports:
+      - "5432:5432"
+  keycloak:
+    image: quay.io/keycloak/keycloak:18.0
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: 4dm1n!
+      KEYCLOAK_IMPORT: /data/realm-cloudbay.json
+      KC_DB: postgres
+      KC_DB_URL: "jdbc:postgresql://postgres/postgres"
+      KC_DB_USERNAME: postgres
+      KC_DB_PASSWORD: masterkey
+    volumes:
+      - ../keycloak/realm-cloudbay.json:/opt/keycloak/data/import/realm-cloudbay.json
+    stdin_open: true
+    tty: true
+    ports:
+      - "8200:8080"
+      - "9090:9090"
+    links:
+      - postgres:postgres
+    entrypoint: "/opt/keycloak/bin/kc.sh start-dev --import-realm"
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9099:9090"
+    volumes:
+      - ../prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    stdin_open: true
+    tty: true
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
