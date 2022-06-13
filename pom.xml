@@ -31,6 +31,7 @@
         <module>cloudbay-commons</module>
         <module>catalog-service</module>
         <module>time-service-api</module>
+        <module>time-service</module>
     </modules>
 
 </project>

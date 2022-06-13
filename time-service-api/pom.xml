@@ -82,9 +82,9 @@
                             <inputSpec>${project.build.directory}/classes/${project.artifactId}.yml</inputSpec>
                             <library>spring-cloud</library>
                             <generatorName>spring</generatorName>
-                            <apiPackage>io.crowdcode.speedbay.time.api</apiPackage>
-                            <modelPackage>io.crowdcode.speedbay.time.model</modelPackage>
-                            <invokerPackage>io.crowdcode.speedbay.time.client</invokerPackage>
+                            <apiPackage>io.crowdcode.cloudbay.time.api</apiPackage>
+                            <modelPackage>io.crowdcode.cloudbay.time.model</modelPackage>
+                            <invokerPackage>io.crowdcode.cloudbay.time.client</invokerPackage>
                             <generateApis>true</generateApis>
                             <generateApiDocumentation>false</generateApiDocumentation>
                             <generateSupportingFiles>true</generateSupportingFiles>
