@@ -3,11 +3,9 @@ package io.crowdcode.cloudbay.greeting.controller;
 import io.crowdcode.cloudbay.greeting.adapter.time.TimeService;
 import io.crowdcode.cloudbay.greeting.config.GreetingProperties;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 import java.util.Optional;
 
 /**
@@ -18,8 +16,8 @@ import java.util.Optional;
 //@RequiredArgsConstructor // Erzeugt einen GreetingController(GreetingProperties greetingProperties)
 public class GreetingController {
 
-    @Autowired
-    private List<GreetingProperties> propertiesList;
+//    @Autowired
+//    private List<GreetingProperties> propertiesList;
 
     private final GreetingProperties greetingProperties;
 
