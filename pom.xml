@@ -30,6 +30,7 @@
         <module>cloudbay-parent</module>
         <module>cloudbay-commons</module>
         <module>catalog-service</module>
+        <module>time-service-api</module>
     </modules>
 
 </project>

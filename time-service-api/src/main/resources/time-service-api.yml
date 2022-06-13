@@ -1,0 +1,32 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: "Time-Service-API"
+  contact:
+    name: "CROWDCODE GmbH & Co. KG"
+    url: "https://crowdcode.io"
+paths:
+  /now:
+    get:
+      tags:
+        - "TimeService"
+      summary: "Time Service liefert den aktuellen Cluster Zeitstempel"
+      operationId: "now"
+      responses:
+        200:
+          description: "Aktueller Zeitstempel"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TimeResponse"
+components:
+  schemas:
+    TimeResponse:
+      type: object
+      properties:
+        now:
+          type: string
+          format: date-time
+          description: "Cluster Zeitstempel"
+      required:
+        - now
