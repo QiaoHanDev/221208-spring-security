@@ -29,6 +29,7 @@
     <modules>
         <module>cloudbay-parent</module>
         <module>cloudbay-commons</module>
+        <module>catalog-service</module>
     </modules>
 
 </project>

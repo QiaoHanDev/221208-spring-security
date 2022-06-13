@@ -1,0 +1,28 @@
+### Get All Products
+GET http://localhost:9020/catalog-service/api/products
+Accept: application/json
+
+### Get One Product
+GET http://localhost:9020/catalog-service/api/products/009c4b02-c9cd-4a83-ab2f-9dda59064527
+Accept: application/json
+
+### Create Product
+POST http://localhost:9020/catalog-service/api/products
+Content-Type: application/json
+
+{
+  "id": 1,
+  "version": 0,
+  "title": "espresso macchiato",
+  "sku": "SKU-ESPRESSO-MACCHIATO",
+  "description": null,
+  "createdAt": null,
+  "createdBy": null,
+  "retailPrice": null,
+  "amount": null,
+  "unit": null,
+  "tags": [
+    "Espresso",
+    "Milchschaum"
+  ]
+}
