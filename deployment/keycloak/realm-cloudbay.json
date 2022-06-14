@@ -2501,7 +2501,7 @@
     "clientOfflineSessionMaxLifespan": "0",
     "clientSessionIdleTimeout": "0",
     "clientSessionMaxLifespan": "0",
-    "frontendUrl": "http://localhost:8200/auth/",
+    "frontendUrl": "",
     "clientOfflineSessionIdleTimeout": "0"
   },
   "keycloakVersion": "11.0.2",
