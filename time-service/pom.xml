@@ -5,7 +5,7 @@
     <parent>
         <artifactId>cloudbay-parent</artifactId>
         <groupId>io.crowdcode.cloudbay</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>3.0-SNAPSHOT</version>
         <relativePath>../cloudbay-parent</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -13,8 +13,7 @@
     <artifactId>time-service</artifactId>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
@@ -53,7 +52,7 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.6.8</version>
+            <version>1.6.13</version>
         </dependency>
 
     </dependencies>
