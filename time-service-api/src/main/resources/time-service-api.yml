@@ -28,5 +28,6 @@ components:
           type: string
           format: date-time
           description: "Cluster Zeitstempel"
-      required:
-        - now
+# Cause of an issue with the current version of openApiGeneratorTool
+#      required:
+#        - now
