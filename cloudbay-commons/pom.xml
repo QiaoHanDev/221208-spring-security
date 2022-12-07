@@ -8,7 +8,7 @@
     <parent>
         <groupId>io.crowdcode.cloudbay</groupId>
         <artifactId>cloudbay-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>3.0-SNAPSHOT</version>
         <relativePath>../cloudbay-parent</relativePath>
     </parent>
 
