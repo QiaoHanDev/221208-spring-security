@@ -20,7 +20,7 @@ public class SecurityConfiguration {
     @Order(1)
     public SecurityFilterChain privateSecurityFilterChain(HttpSecurity http) throws Exception {
         var scf =  http
-                .securityMatcher("/user/**","/login/**", "/logout", "/oauth2/**")
+                .securityMatcher("/user/**","/login/**", "/logout")
                 .authorizeHttpRequests(authorizeConfig -> {
                     authorizeConfig.requestMatchers("/user/private").authenticated();
 //                            .hasRole("user");
